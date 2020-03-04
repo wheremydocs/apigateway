@@ -38,3 +38,6 @@ jobs: # a collection of steps
       - store_artifacts: # Upload test results for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: build/test-results
           when: always
+      - store_artifacts:
+          path: build/reports
+          when: always
