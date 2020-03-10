@@ -46,6 +46,7 @@ jobs: # a collection of steps
           when: always
 
 workflows:
+  version: 2
   main:
     jobs:
       - build:
