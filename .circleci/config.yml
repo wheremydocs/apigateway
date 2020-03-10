@@ -8,6 +8,7 @@ jobs: # a collection of steps
       GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
     machine:
       image: ubuntu-1604:201903-01
+    context: SonarCloud
     steps: # a collection of executable commands
       - run: sudo apt-get update
       - run: sudo apt-get -y install openjdk-11-jdk
@@ -24,6 +25,9 @@ jobs: # a collection of steps
           path: build/libs
       - run: ./gradlew test
       - run: ./gradlew integrationTest
+      - run:
+          name: Analyze on SonarCloud
+          command: ./gradlew sonarqube"
       - save_cache:
           paths:
             - ~/.gradle/wrapper
