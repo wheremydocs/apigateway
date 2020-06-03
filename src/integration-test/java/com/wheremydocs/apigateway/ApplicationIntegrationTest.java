@@ -1,6 +1,6 @@
-package com.everydocs.apigateway;
+package com.wheremydocs.apigateway;
 
-import com.everydocs.apigateway.support.AbstractIntegrationTest;
+import com.wheremydocs.apigateway.support.BaseIntegrationTest;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.web.servlet.MvcResult;
@@ -8,7 +8,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
-public class ApplicationIntegrationTest extends AbstractIntegrationTest {
+public class ApplicationIntegrationTest extends BaseIntegrationTest {
 
   @Test
   public void contextLoads() {

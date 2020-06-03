@@ -1,4 +1,4 @@
-package com.everydocs.apigateway;
+package com.wheremydocs.apigateway;
 
 import org.junit.jupiter.api.Test;
 

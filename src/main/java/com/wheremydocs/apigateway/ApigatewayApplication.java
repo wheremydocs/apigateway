@@ -1,4 +1,4 @@
-package com.everydocs.apigateway;
+package com.wheremydocs.apigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

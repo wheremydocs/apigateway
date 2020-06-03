@@ -1,4 +1,4 @@
-package com.everydocs.apigateway.support;
+package com.wheremydocs.apigateway.support;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -14,7 +14,7 @@ import javax.annotation.PostConstruct;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public abstract class AbstractIntegrationTest {
+public abstract class BaseIntegrationTest {
 
   protected final ObjectMapper mapper = new ObjectMapper();
 
