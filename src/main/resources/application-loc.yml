@@ -1,2 +1,8 @@
 server:
-  port: 8801
+  port: 8081
+
+logging:
+  level:
+    ROOT: INFO
+  pattern:
+    console: "%d{HH:mm:ss} %clr(%-5p) %clr(:){faint} %clr(%m){faint}%n"

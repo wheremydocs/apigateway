@@ -1,13 +1,11 @@
 package com.wheremydocs.apigateway;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+@SpringBootTest
 class ApigatewayApplicationTest {
 
   @Test
-  void main() {
-    // empty test
-  }
+  void contextLoads() {}
 }
