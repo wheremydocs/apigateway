@@ -26,7 +26,6 @@ spring:
         instanceId: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
         tags:
           - profile=${spring.profiles.active}
-          -
     loadbalancer:
       ribbon:
         enabled: false
@@ -35,13 +34,27 @@ spring:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
           predicates:
-            - Path='/api/' + serviceId + '/**','/api/' + serviceId
+            - name: Path
+              args:
+                pattern: "'/api/' + serviceId + '/**'"
           filters:
             - name: RewritePath
               args:
                 regexp: "'/api/' + serviceId + '/?(?<remaining>.*)'"
                 replacement: "'/${remaining}'"
-          lower-case-service-id: true
+      default-filters:
+        - name: DedupeResponseHeader
+          args:
+            name: "Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Allow-Headers"
+            strategy: RETAIN_FIRST
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+
 
 
