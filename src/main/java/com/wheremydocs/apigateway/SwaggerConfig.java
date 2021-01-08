@@ -4,14 +4,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import springfox.documentation.swagger.web.SwaggerResource;
 import springfox.documentation.swagger.web.SwaggerResourcesProvider;
-import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
 @Primary
-@EnableSwagger2WebFlux
+@EnableSwagger2
 public class SwaggerConfig implements SwaggerResourcesProvider {
 
   @Override

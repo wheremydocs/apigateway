@@ -22,7 +22,6 @@ spring:
         catalog-services-watch-delay: 20000
         heartbeat:
           enabled: false
-          ttl-value: 10
         instanceId: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
         tags:
           - profile=${spring.profiles.active}
